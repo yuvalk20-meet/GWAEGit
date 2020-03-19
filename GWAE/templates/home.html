@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='homepage.css')}}">
+</head>
+<body>
+
+<ul class="topnav">
+  <li><img src={{userpic}} class="roundimg"></li>
+  <li><a class="active" href="/"><img width = '20' src="{{url_for('static', filename='pictureiuse/home-run.png')}}"></a></li>
+  <li><a href="/posts"><img src="pictureiuse/more.png"></a></li>
+  <li><a href="/login">Log In</a></li>
+  <li><a href="/signup">Sign Up</a></li>
+  <li class="right"><a href="/">About</a></li>
+</ul>
+
+<div style="padding:0 16px; text-align: center; border-color: red; border: 3px; margin: 0 auto;">
+	  		<!-- Trigger/Open The Modal -->
+		<button id="myBtn">Open Modal</button>
+
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close">&times;</span>
+		    <form action="/" method="post" enctype="multipart/form-data">
+		    	<textarea rows = "5" cols = "60" name = "description"></textarea><br>
+	    		<input type="file" name = "picturebyuser"><br>
+	    		<form method=post enctype="multipart/form-data">
+	    		<input type="text" name="username" value="{{user.username}}" hidden>
+	    		<input type="submit" value="Submit">
+		    </form>   
+		  </div>
+		
+
+</div>
+</div>
+
+
+{% for post in posts %}
+<div id = "post">
+	<img src="post.picture" alt="User Picture" width="42" height="42" align="left" class="roundimg"><h4 style="text-align: left;">{{post.username}} I am username</h4>
+
+	<form action="/follow" method="post">
+		<input type="text" name="myusername" value="{{username}}" hidden>
+		<input type="text" name="postusername" value="{{post.username}}" hidden>
+		<input type="submit" value="Submit">
+	</form>
+
+	
+	<img src="{{url_for('static', filename='postpics/'+post.picture)}}" width="200">
+	<h4>{{post.description}}</h4>
+	<h6>uploaded at {{post.time_upload}}</h6>
+</div>
+
+{% endfor %} 
+	
+
+</body>
+
+<script type="text/javascript" src="{{url_for('static', filename='home.js')}}"></script>
+
+</html>
