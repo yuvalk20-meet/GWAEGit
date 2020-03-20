@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, Date, ForeignKey, Float, Boolean, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from passlib.apps import custom_app_context as pwd_security 
+from sqlalchemy.sql import func
 
 
 
@@ -29,5 +30,5 @@ class Posts(Base):
 	username = Column(String)
 	picture = Column(String)
 	description = Column(String)
-	time_upload = Column(DateTime)
+	time_upload = Column(String)
 

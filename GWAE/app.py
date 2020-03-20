@@ -63,16 +63,20 @@ def homepage():
 				list_of_posts_by_user = get_post(i)
 				all_posts += list_of_posts_by_user
 
-			all_posts.sort(key =  lambda x:x.time_upload)
+			all_posts.sort(key =  lambda x:datetime.strptime(x.time_upload, '%Y-%m-%d %H:%M:%S.%f'))
+			all_posts[::-1]
 			return render_template("home.html", user = user, posts = all_posts)
 
 
 		else:
 			posts1 = get_all_posts()
+			posts1[::-1]
 			return render_template("home.html", userpic = "picturiuse/avatarpro.png", posts = posts1, user = 'Guest')
 		
 	else:
 		current_time = datetime.now()
+		time_str = current_time.strftime('%Y-%m-%d %H:%M:%S.%f')
+		print(time_str)
 		des = request.form['description']
 		pic = request.files['picturebyuser']
 		pic.save("static/userpic/"+pic.filename)
