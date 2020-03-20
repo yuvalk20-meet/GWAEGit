@@ -82,9 +82,12 @@ def homepage():
 		pic.save("static/userpic/"+pic.filename)
 		name = request.form['username']
 
-		add_post(name, des, pic, current_time)
+		add_post(name, des, pic.filename, current_time)
 		print(name + " was created")
-		return render_template("home.html")
+
+		
+
+		
 
 
 		
