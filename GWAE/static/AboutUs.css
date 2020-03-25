@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+body {
+	background-color: #bb8a44;
+}
+
+.picofu{
+	width: 200px;
+	border-radius: 50%;
+}
+
+#header1{
+	text-align: center;
+	font-family: 'Assistant', sans-serif, bold;
+	font-size: 5em;
+	color: #5f6f3a; 
+}
+
+#header2{
+	text-align: center;
+	font-family: 'Assistant', sans-serif, bold;
+	font-size: 5em;
+	color: #82b1d6; 
+}
+
+
+
+table {
+	width: 100%;
+	margin-top: 5%;
+	margin-right: auto;
+}
+
+
+.misvis {
+	color: #5f6f3a;
+	width: 400px;
+	height: 460px;
+	font-family: 'Assistant', sans-serif;
+	font-size:1.3em;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top:2%;
+	text-align: center;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+	font-size: 2.5em;
+}
+
+
+.aboutme {
+	color: #82b1d6;
+	width: 280px;
+	height: 675px;
+	font-family: 'Assistant', sans-serif;
+	font-size:1.3em;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top:2%;
+	text-align: center;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+

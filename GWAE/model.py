@@ -31,4 +31,5 @@ class Posts(Base):
 	picture = Column(String)
 	description = Column(String)
 	time_upload = Column(String)
+	userpic = Column(String)
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up to GWAE!</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='signup.css')}}">
+</head>
+<body>
+
+
+<div class="aligndiv">
+    <p id="header">Sign Up</p>
+
+    <div id="formdiv">
+
+    <form action="/signup" method="post" enctype="multipart/form-data">
+    Create Username: <input class="bordered" type="username" name="username" placeholder="Username">
+    <br>
+    Select Your Gender Identification:<br>
+
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Genderqueer/Non-Binary">Genderqueer/Non-Binary
+    <input type="radio" name="gender" value="Prefer not to disclose">Prefer not to disclose
+    <input type="radio" name="gender" value="other">other
+    <br>
+    <input class="bordered" type="text" name="password" placeholder="password"><br>
+
+    Add Picture:<input id = "picinput" type="file" name = "pic"><br>
+    <form method=post enctype="multipart/form-data">
+    Enter Your Birthday:<input class="bordered" type="date" id="birthdaytime" name="birthdaytime"><br>
+    <input id = "submit" type="submit" value="Sign Up">
+
+    </div>
+
+
+    </form>
+
+</div>
+</body>
+</html>

@@ -30,28 +30,7 @@
   <li class="right"><a href="/about">About</a></li>
 </ul>
 
-<div style="padding:0 16px; text-align: center; border-color: red; border: 3px; margin: 0 auto;">
-	  		<!-- Trigger/Open The Modal -->
-		<button class="buttonsgreen" id="myBtn">Add Post</button>
 
-		<!-- The Modal -->
-		<div id="myModal" class="modal">
-
-		  <!-- Modal content -->
-		  <div class="modal-content" style="background-image: url(https://image.freepik.com/free-vector/emoji-framed-background_53876-89769.jpg); background-repeat: no-repeat; background-size: 1050px;">
-		    <span class="close">&times;</span>
-		    <form action="/" method="post" enctype="multipart/form-data">
-		    	<textarea placeholder="What's going on?" rows = "5" cols = "60" name = "description"></textarea><br>
-	    		<input type="file" name = "picturebyuser"><br>
-	    		<form method=post enctype="multipart/form-data">
-	    		<input type="text" name="username" value="{{user.username}}" hidden>
-	    		<input class="buttonsgreen" type="submit" value="Submit">
-		    </form>   
-		  </div>
-		
-
-</div>
-</div>
 
 <br>
 <br>
@@ -73,7 +52,11 @@
 	<img style="" src="{{url_for('static', filename='userpic/'+post.userpic)}}" alt="User Picture" width="50" height="42" align="left" class="roundimg"><h4 style="float: left;">{{post.username}}</h4>
 	</div>
 	<div id="followbtn" style="float: right;">
-	
+	<form action="/follow" method="post">
+		<input type="text" name="myusername" value="{{username}}" hidden>
+		<input type="text" name="postusername" value="{{post.username}}" hidden>
+		<input class="buttonsgreen" type="submit" value="Follow">
+	</form>
 	</div>
 	</div>
 
